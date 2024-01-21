@@ -79,6 +79,7 @@ h1 {
 
 #banner {
     width: 100%;
+    height: 469px;
     object-fit: cover;
 }
 
