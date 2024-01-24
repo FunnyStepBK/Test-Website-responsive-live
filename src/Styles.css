@@ -1,5 +1,7 @@
+/* Base styles (extra small devices - mobile) */
+
 html {
-    color: rgb(30,30,40);
+    font-size: 14px;
 }
 
 body {
@@ -10,108 +12,129 @@ body {
     color: #444444;
 }
 
-h2,h3,h4,h5,h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     color: #222222;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.75rem; }
-h4 { font-size: 1.5rem; }
-h5 { font-size: 1.25rem; }
-h6 { font-size: 1rem; }
-
-
-#navbar {
-    padding: 5px 10px 10px 5px;
-    margin: 0px;
+h1 {
+    font-size: 2.5rem;
 }
 
-#logo {
-    height: 70px;
-    width: 70px;
-    border-radius: 20%;
-    border: 3px solid rgb(146, 166, 177);
-    margin: 0;
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
 }
 
 .Some-links {
     text-decoration: none;
     color: #3B82F6;
 }
-.Some-links:hover {
+
+.Some-links:hover,
+.Some-links:focus {
     color: #1E40AF;
+}
+
+#navbar {
+    padding: 5px 10px 4px 5px;
+    margin: 0px;
+}
+
+#logo {
+    height: 48px;
+    border-radius: 50%;
+    box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.38);
+}
+
+#banner {
+    object-fit: cover;
+    height: 170px;
+    width: 100%;
+    box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.38);
+}
+
+h1 {
+    text-align: center;
+    margin: 12px 0px;
+    color: #222222;
 }
 
 #about {
     display: flex;
-    max-width: 800px;
-    margin: 0 auto;
-    padding-right: 8px;
+    max-width: 500px;
+    margin: 0px auto;
+    padding: 8px;
+    flex-direction: column;
 }
 
 #description {
-    width: 50%;
-    padding: 0 10px;
-    font-size: 1.20rem;
-}
-
-#team {
-    width: 50%;
+    margin-bottom: 22px;
 }
 
 #team-image {
-    border-radius: 12px;
-    width: 430px;
-    height: 300px;
-}
-
-h1 {
-    background-image: linear-gradient(43deg, #5c2ddf 0%, #C850C0 66%, #FFCC70 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-size: 35px;
-    text-align: center;
-}
-
-#banner {
-    width: 100%;
-    height: 469px;
-    object-fit: cover;
-}
-
-#jobs-table {
-    width: 100%;
-    border: 1px solid gray;
-    border-collapse: collapse;
-}
-
-.jobs-header-row th {
-  border: 1px solid gray;
-  padding: 8px;
-  background-color: #DBEAFE;
-  text-align: center;
-  color: #222222;
-}
-
-.jobs-data-row td {
-border: 1px solid gray;
-padding: 8px;
-}
-
-#jobs-table tr:nth-child(odd) {
-    background-color: #EFF6FF;
+    border-radius: 5px;
+    width: 100%
 }
 
 h2 {
     text-align: center;
 }
 
+#jobs {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 8px;
+}
+
+#job-lists {
+    display: block;
+}
+
+#jobs-table {
+    display: none;
+}
+
+.job {
+    padding: 8px;
+    border: 1px solid #dddddd;
+    margin-top: 10px;
+    border-radius: 4px
+}
+
+.job-title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #222222;
+}
+
+.job-detail {
+    margin-top: 5px;
+    color: #555555;
+}
+
 #application {
-    max-width: 800px;
+    max-width: 500px;
     margin: auto;
     padding: 0 8px;
 }
@@ -121,10 +144,11 @@ h2 {
 }
 
 #application-form label {
-font-weight: 600;
+    font-weight: 600;
 }
 
-#application-form input, select,textarea {
+.form-group input,select,textarea {
+    width: 90%;
     padding: 8px;
     font-size: 1.25rem;
     margin-top: 4px;
@@ -133,8 +157,7 @@ font-weight: 600;
 }
 
 .form-group textarea {
-width: 80%;
-font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .form-group input[type="checkbox"] {
@@ -149,21 +172,6 @@ font-family: 'Roboto', sans-serif;
     cursor: pointer;
 }
 
-#jobs {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 8px;
-}
-
-.job-roles {
-    margin-bottom: 4px;
-    margin-top: 0;
-}
-
-.apply {
-    float: right;
-}
-
 #footer {
     background-color: #E2E8F0;
     padding: 8px;
@@ -173,11 +181,11 @@ font-family: 'Roboto', sans-serif;
 
 #footer-links {
     list-style: none;
+    padding-left: 0px;
 }
 
 #footer-links li {
-    display: inline;
-    margin: 0 36px;
+    margin:  8px 36px;
 }
 
 .help {
@@ -187,4 +195,154 @@ font-family: 'Roboto', sans-serif;
 }
 .help:hover {
     color: #292524;
+} 
+
+/* Small devices (tablets) */
+@media screen and (min-width: 576px) {
+    html {
+        font-size: 16px;
+    }
+
+    #logo {
+        height: 48px;
+    }
+
+    #banner {
+        height: 330px
+    }
+
+    h1 {
+        margin: 18px 0px;
+    }
+
+    #description {
+        font-size: 1.20rem;
+    }
+
+    #team-image {
+        border-radius: 8px;
+    }
+
+    #application-form input,
+    select {
+        width: auto;
+    }
+
+    #application-form textarea {
+        width: 80%;
+    }
+
+    #footer-links li {
+        display: inline;
+    }
 }
+
+
+
+
+
+/* Medium devices (laptops) */
+@media screen and (min-width: 769px) {
+    html {
+        font-size: 17px;
+    }
+
+    #logo {
+        height: 78px;
+    }
+
+    #banner {
+        height: 520px
+    }
+
+    h1 {
+        margin: 23px 0px 22px;
+    }
+
+    #about {
+        max-width: 800px;
+        flex-direction: row;
+    }
+
+    #description {
+        width: 50%;
+        padding-right: 8px;
+    }
+
+    #team {
+        width: 50%;
+    }
+
+    #team-image {
+        width: 100%;
+        height: 280px;
+    }
+
+    #jobs {
+        max-width: 800px;
+    }
+
+    #job-lists {
+        display: none;
+    }
+
+    #jobs-table {
+        display: table;
+        width: 100%;
+        border: 1px solid gray;
+        border-collapse: collapse;
+    }
+
+    .jobs-header-row th {
+        border: 1px solid gray;
+        padding: 8px;
+        background-color: #DBEAFE;
+        text-align: center;
+        color: #222222;
+    }
+
+    .jobs-data-row td {
+        border: 1px solid gray;
+        padding: 8px;
+    }
+
+    #jobs-table tr:nth-child(odd) {
+        background-color: #EFF6FF;
+    }
+
+    #application {
+        max-width: 800px;
+    }
+}
+
+
+
+
+
+/* Large devices (desktops) */
+@media screen and (min-width: 992px) {
+    html {}
+}
+
+
+
+
+
+/* Extra large devices (large desktops) */
+@media screen and (min-width: 1200px) {
+    html {}
+}
+
+
+
+
+/* 
+h1 {
+    background-image: linear-gradient(43deg, #5c2ddf 0%, #C850C0 66%, #FFCC70 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 35px;
+    text-align: center;
+}
+*/
